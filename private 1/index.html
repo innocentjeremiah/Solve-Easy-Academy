@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLVE EASY ACADEMY - BSU Materials</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+        }
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        /* Course Buttons */
+        .course-btn {
+            transition: all 0.3s;
+            border-radius: 8px;
+            border: 2px solid var(--secondary);
+        }
+        .course-btn:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        /* Tutor Cards */
+        .tutor-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .tutor-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        /* Download Options */
+        .download-option {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .download-option:hover {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-graduation-cap me-2"></i>SOLVE EASY ACADEMY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#materials">Materials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutorials">Tutorials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Easy Learning Materials</h1>
+            <p class="lead fs-5 mb-5">Download lecture notes, past questions, and textbooks for all levels</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#materials" class="btn btn-primary btn-lg px-4 py-3">
+                    <i class="fas fa-book-open me-2"></i>Browse Materials
+                </a>
+                <a href="#tutorials" class="btn btn-outline-light btn-lg px-4 py-3">
+                    <i class="fas fa-chalkboard-teacher me-2"></i>Watch Tutorials
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Course Materials</h2>
+            
+            <!-- Level Tabs -->
+            <ul class="nav nav-tabs justify-content-center mb-4" id="levelTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="100l-tab" data-bs-toggle="tab" data-bs-target="#100l" type="button">100 Level</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="200l-tab" data-bs-toggle="tab" data-bs-target="#200l" type="button">200 Level</button>
+                </li>
+                <!-- Uncomment for 300L/400L -->
+                <!--
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="300l-tab" data-bs-toggle="tab" data-bs-target="#300l" type="button">300 Level</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="400l-tab" data-bs-toggle="tab" data-bs-target="#400l" type="button">400 Level</button>
+                </li>
+                -->
+            </ul>
+
+            <!-- Level Content -->
+            <div class="tab-content" id="levelContent">
+                <!-- 100 Level -->
+                <div class="tab-pane fade show active" id="100l" role="tabpanel">
+                    <!-- Semester Toggle -->
+                    <div class="text-center mb-4">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary active semester-btn" data-semester="first">First Semester</button>
+                            <button type="button" class="btn btn-primary semester-btn" data-semester="second">Second Semester</button>
+                        </div>
+                    </div>
+
+                    <!-- First Semester (100L) -->
+                    <div id="first-semester-100" class="semester-content">
+                        <div class="row g-3">
+                            <!-- PHY 101 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="phy101">
+                                    PHY 101 - General Physics I
+                                </button>
+                            </div>
+                            <!-- MTH 101 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="mth101">
+                                    MTH 101 - General Mathematics I
+                                </button>
+                            </div>
+                            <!-- CHM 101 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-bs-toggle="modal" data-bs-target="#courseModal" data-course="chm101">
+                                    CHM 101 - General Chemistry I
+                                </button>
+                            </div>
+
+                            <!-- chemistry modal -->
+                             <!-- Modal for Course Selection -->
+<div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="courseModalLabel">Choose a Course for CHM 101</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Button for Course 1 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 1</button>
+            </div>
+            <!-- Button for Course 2 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 2</button>
+            </div>
+            <!-- Button for Course 3 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 3</button>
+            </div>
+            <!-- Button for Course 4 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 4</button>
+            </div>
+            <!-- Button for Course 5 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 5</button>
+            </div>
+            <!-- Button for Course 6 -->
+            <div class="col-6 mb-3">
+              <button class="btn btn-primary w-100">Course 6</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                            <!-- BIO 101 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="bio101">
+                                    BIO 101 - General Biology I
+                                </button>
+                            </div>
+                            <!-- CHM 111 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="chm111">
+                                    CHM 111 - Practical Chemistry I
+                                </button>
+                            </div>
+                            <!-- PHY 111 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="COM101">
+                                    COM 101 - computer science
+                                </button>
+                            </div>
+                            <!-- BIO 111 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="bio111">
+                                    BIO 111 - Practical Biology I
+                                </button>
+                            </div>
+                            <!-- GST 101 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="gst101">
+                                    GST 101 - Use of English I
+                                </button>
+                            </div>
+                            <!-- GST 103 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="gst103">
+                                    GST 103 - Philosophy & Logic
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Semester (100L) -->
+                    <div id="second-semester-100" class="semester-content d-none">
+                        <div class="row g-3">
+                            <!-- PHY 102 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="phy102">
+                                    PHY 102 - General Physics II
+                                </button>
+                            </div>
+                            <!-- MTH 102 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="mth102">
+                                    MTH 102 - General Mathematics II
+                                </button>
+                            </div>
+                            <!-- CHM 102 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="chm102">
+                                    CHM 102 - General Chemistry II
+                                </button>
+                            </div>
+                            <!-- BIO 102 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="bio102">
+                                    BIO 102 - General Biology II
+                                </button>
+                            </div>
+                            <!-- CHM 112 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="chm112">
+                                    CHM 112 - Practical Chemistry II
+                                </button>
+                            </div>
+                            <!-- PHY 112 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="phy112">
+                                    PHY 112 - Practical Physics II
+                                </button>
+                            </div>
+                            <!-- BIO 112 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="bio112">
+                                    BIO 112 - Practical Biology II
+                                </button>
+                            </div>
+                            <!-- GST 102 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="gst102">
+                                    GST 102 - Use of English II
+                                </button>
+                            </div>
+                            <!-- GST 104 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="gst104">
+                                    GST 104 - Nigerian Peoples & Culture
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 200 Level -->
+                <div class="tab-pane fade" id="200l" role="tabpanel">
+                    <!-- Semester Toggle -->
+                    <div class="text-center mb-4">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary active semester-btn" data-semester="first">First Semester</button>
+                            <button type="button" class="btn btn-primary semester-btn" data-semester="second">Second Semester</button>
+                        </div>
+                    </div>
+
+                    <!-- First Semester (200L) -->
+                    <div id="first-semester-200" class="semester-content">
+                        <div class="row g-3">
+                            <!-- PHY 201 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="phy201">
+                                    PHY 201 - Mathematical Physics I
+                                </button>
+                            </div>
+                            <!-- MTH 201 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="mth201">
+                                    MTH 201 - Mathematical Methods I
+                                </button>
+                            </div>
+                            <!-- Add remaining 200L first semester courses -->
+                        </div>
+                    </div>
+
+                    <!-- Second Semester (200L) -->
+                    <div id="second-semester-200" class="semester-content d-none">
+                        <div class="row g-3">
+                            <!-- PHY 202 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="phy202">
+                                    PHY 202 - Mathematical Physics II
+                                </button>
+                            </div>
+                            <!-- MTH 202 -->
+                            <div class="col-md-4 col-sm-6">
+                                <button class="course-btn btn btn-outline-secondary w-100 py-3" data-course="mth202">
+                                    MTH 202 - Mathematical Methods II
+                                </button>
+                            </div>
+                            <!-- Add remaining 200L second semester courses -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutors Section -->
+    <section id="tutors" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Our Tutors</h2>
+            <div class="row g-4 " style="align-items: center; justify-content: center;">
+                <!-- Tutor 1 -->
+                <div class="col-12 col-md-3 col-sm-6">
+                    <div class="tutor-card shadow">
+                        <img src="./jerry.jpeg" class="img-fluid w-60" alt="Tutor 1">
+                        <div class="p-3 text-center" >
+                            <h5 class="mb-1">Innocent Jeremia</h5>
+                            <p class="text-muted">Physics Specialist</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tutor 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="tutor-card shadow">
+                        <img src="./emma.jpeg" class="img-fluid w-100" alt="Tutor 2">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Edoh Emmanuel</h5>
+                            <p class="text-muted">Mathematics Expert</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tutor 3 -->
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="tutor-card shadow">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-fluid w-100" alt="Tutor 3">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Dr. Michael Brown</h5>
+                            <p class="text-muted">Chemistry Tutor</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Contact</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- Tutor 4 -->
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="tutor-card shadow">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="img-fluid w-100" alt="Tutor 4">
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Dr. Grace Williams</h5>
+                            <p class="text-muted">Biology Lecturer</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Contact</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Video Tutorials</h2>
+                    <p class="lead">Watch step-by-step tutorials on our YouTube channel.</p>
+                    <a href="https://www.youtube.com/@solveeasyacademy186" target="_blank" class="btn btn-danger btn-lg">
+                        <i class="fab fa-youtube me-2"></i> Visit Channel
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KEpUxEMXvck?si=eitb700w83rxc_aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Need Help?</h4>
+                            <form action="mailto:your-email@example.com?subject=Help%20Request&body=Name:%20%5BName%5D%0AEmail:%20%5BEmail%5D%0AMessage:%20%5BMessage%5D" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Quick Links</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    YouTube Channel
+                                    <a href="https://www.youtube.com/@solveeasyacademy186" class="btn btn-sm btn-outline-danger">Visit</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    WhatsApp Group
+                                    <a href="#" class="btn btn-sm btn-outline-success">Join</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Telegram Channel
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Join</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-5">
+                                <h5>Office Hours</h5>
+                                <p>Monday - Friday: 9am - 5pm</p>
+                                <p>Saturday: 10am - 2pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>SOLVE EASY ACADEMY</h5>
+                        <p>Your premier destination for academic excellence.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#materials" class="text-white">Materials</a></li>
+                            <li><a href="#tutors" class="text-white">Tutors</a></li>
+                            <li><a href="#tutorials" class="text-white">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact</h5>
+                        <p><i class="fas fa-envelope me-2"></i> contact@solveeasyacademy.com</p>
+                        <p><i class="fas fa-phone me-2"></i> +234 7037026683</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p class="mb-0">&copy; 2025 SOLVE EASY ACADEMY. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Download Options Modal -->
+    <div class="modal fade" id="downloadOptionsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="materialTitle">Download Options</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="download-option p-3 border-bottom" data-action="view">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-eye fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-1">View Online</h6>
+                                <small class="text-muted">Open in Google Drive</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download-option p-3" data-action="download">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-download fa-2x text-success me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Download File</h6>
+                                <small class="text-muted">Save to your device</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const semesterButtons = document.querySelectorAll('.semester-btn');
+
+    semesterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const parentTab = button.closest('.tab-pane'); // Get current level (100L or 200L)
+        const semester = button.getAttribute('data-semester');
+
+        // Remove active class from all semester buttons inside the same level
+        parentTab.querySelectorAll('.semester-btn').forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to the clicked button
+        button.classList.add('active');
+
+        // Hide all semester contents inside the same level
+        parentTab.querySelectorAll('.semester-content').forEach(content => content.classList.add('d-none'));
+
+        // Show the correct semester content
+        const semesterContent = parentTab.querySelector(`#${semester}-semester-${parentTab.id.replace('l', '')}`);
+        if (semesterContent) {
+          semesterContent.classList.remove('d-none');
+        }
+      });
+    });
+  });
+        // Course Materials Data
+        const courseMaterials = {
+            // 100 Level - First Semester
+            phy101: {
+                title: "PHY 101 - General Physics I",
+                viewUrl: "https://drive.google.com/file/d/1nRdyEGgvxdYPVp51gnU8TXpCtaF43cXq/view",
+                downloadUrl: "https://drive.google.com/uc?export=download&id=https:1nRdyEGgvxdYPVp51gnU8TXpCtaF43cXq"
+            },
+            mth101: {
+                title: "MTH 101 - General Mathematics I",
+                viewUrl: "https://drive.google.com/file/d/1ZQ9Udm8mrCpEW4_CPELhUDP2rFDpR-x_/view",
+                downloadUrl: "https://drive.google.com/uc?export=download&id=1ZQ9Udm8mrCpEW4_CPELhUDP2rFDpR-x_"
+            },
+            COM101: {
+                title: "COM 101 - Introduction to Computer Science",
+                viewUrl: "https://drive.google.com/file/d/1p2XtQCCcIPr3jfFacTwjKmOzrtU3rEmn/view",
+                downloadUrl: "https://drive.google.com/uc?export=download&id=1p2XtQCCcIPr3jfFacTwjKmOzrtU3rEmn"
+            },
+            // Add all other courses similarly
+        };
+
+        // Handle Course Button Clicks
+        document.querySelectorAll('.course-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const courseCode = this.getAttribute('data-course');
+                const material = courseMaterials[courseCode];
+                
+                // Set modal title
+                document.getElementById('materialTitle').textContent = material.title;
+                
+                // Show modal
+                const modal = new bootstrap.Modal(document.getElementById('downloadOptionsModal'));
+                modal.show();
+                
+                // Set up option click handlers
+                document.querySelectorAll('.download-option').forEach(option => {
+                    option.onclick = function() {
+                        const action = this.getAttribute('data-action');
+                        if (action === 'view') {
+                            window.open(material.viewUrl, '_blank');
+                        } else {
+                            window.open(material.downloadUrl, '_blank');
+                        }
+                        modal.hide();
+                    };
+                });
+            });
+        });
+
+        // Handle Semester Toggle Buttons
+        document.querySelectorAll('.semester-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const semester = this.getAttribute('data-semester');
+                const level = this.closest('.tab-pane').id; // 100l, 200l, etc.
+                
+                // Hide all semester contents in this level
+                document.querySelectorAll(`#${level} .semester-content`).forEach(content => {
+                    content.classList.add('d-none');
+                });
+                
+                // Show selected semester
+                document.getElementById(`${semester}-semester-${level}`).classList.remove('d-none');
+                
+                // Update active button state
+                this.closest('.btn-group').querySelectorAll('.btn').forEach(b => {
+                    b.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
